@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.filter-btn-fix {
+  font-size: 60px;
+  float: right;
+  margin-top: -20px;
+}
+
+#logo {
+  float: left;
+  width:200px;
+  height: 200px;
+  margin-top: -65px;
+}
+
+
+.headingSection {
+  height: 200px;
+  position: fixed;
+  width: 100%
+}
+
+.sortBy{
+  height: 150px;
+  position: fixed;
+  width: 100%;
+  margin-top: 200px;
+  border-style: solid;
+  border-color: black;
+  background-color: white;
+}
+
+.order-btn-fix {
+  font-size: 60px;
+  float: right;
+  margin-top: -40px;
+}
