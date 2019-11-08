@@ -10,18 +10,50 @@
 
   <!-- Heading Section  -->
 
+
+  <!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="#">All</a>
+    <a href="#">By Island</a>
+    <a href="#">By Region</a>
+    <a href="#">By Personal Seen/Unseen</a>
+  </div>
+
+</div>
+
     <div id="headingSection" class="jumbotron headingSection">
 
         <img id="logo" src="assets/images/logo.jpg" alt="">
 
-        <button type="button" class="btn btn-info filter-btn-fix"> &nbsp Filter By &nbsp </button>
+        <span onclick="openNav()"><button type="button" class="btn btn-outline-info filter-btn-fix"> &nbsp Filter By &nbsp </button></span>
 
     </div>
 
     <div id="sortBy" class="jumbotron sortBy">
 
+      <h3 class="titleSB"> Sort By: </h3>
 
-      <button type="button" class="btn btn-outline-info order-btn-fix"> &nbsp Filter By &nbsp </button>
+      <div id="wayChange" class="">
+
+      <img class="wayChange" src="assets/images/down.png" alt="">
+
+    </div>
+
+    <div id="sortChange">
+
+      <button type="button" class="btn btn-outline-info order-btn-fix"> &nbsp &nbsp Numeric &nbsp &nbsp </button>
+
+    </div>
+
+
+
+
 
     </div>
 
