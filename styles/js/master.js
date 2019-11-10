@@ -203,6 +203,9 @@ var islandArray = ['North', 'South'];
 
 var regionArray = ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki', 'Manawatu', 'Hawkes-Bay', 'Wellington', 'Tasman', 'Nelson', 'Marlborough', 'West-Coast', 'Cantebury', 'Otago', 'Southland'];
 
+var selectedBird = [1];
+var stringBV = 1;
+
 // Island Modal
 
 for (var i = 0; i < islandArray.length; i++) {
@@ -601,32 +604,128 @@ function writeFencers(){
 //   console.log(numbers);
 // };
 
+var funcs = [];
+
+function createfunc(i){
+  return function(){
+    console.log(birds[i].number);
+    // document.getElementById('birdValue' + (i + 1) + '').addEventListener('click', function(){
+    // selectedBird.splice(0,selectedBird.length);
+    // selectedBird.push(birds[i].number);
+    // console.log(selectedBird);
+    // });
+  };
+};
+
+for (var j = 0; j < 3; j++) {
+  // and now let's run each one to see
+  funcs[j]();
+}
+
+
+
+
+
 
 function profileMaker(){
   for (var i = 0; i < birds.length; i++) {
     for (var j = 0; j < numbers.length; j++) {
       if (birds[i].number === numbers[j]) {
+        funcs[i] = createfunc(i);
         document.getElementById('profiles').innerHTML
-        +=  '<div class="card mb-3 card-fix" style="max-width: 540px;">  <div class="row no-gutters"><div class="col-md-4"><img src="assets/images/'
+        +=  '<div id="birdValue' + birds[i].number + '" class="card mb-3 card-fix" style="max-width: 540px;"><div class="row no-gutters"><div class="col-md-4"><img src="assets/images/'
         + birds[i].image
         + '" class="card-img" alt="'
         + birds[i].name
-        + '"></div><div class="col-md-8"><div class="card-body"><h5 class="card-title">'
+        + '"></div><div class="col-md-8"<div class="card-body"><h5 class="card-title">'
         + birds[i].name
         + '</h5><p class="card-text">'
         + birds[i].info
         + '</p><p class="card-text"><small class="text-muted">'
         + birds[i].number
-        + '</small></p></div></div></div></div>'
-      }
-    }
-  }
+        + '</small></p></div></div></div></div>';
+      };
+    };
+  };
   console.log(numbers);
 };
 
 
 
 
+// function selectingBirds(){
+//   document.getElementById('birdValue1').addEventListener('click', function(){
+//       selectedBird.splice(0,selectedBird.length);
+//       selectedBird.push(1);
+//       console.log(selectedBird);
+//   });
+//
+//   document.getElementById('birdValue2').addEventListener('click', function(){
+//       selectedBird.splice(0,selectedBird.length);
+//       selectedBird.push(2);
+//       console.log(selectedBird);
+//   });
+//
+//   document.getElementById('birdValue3').addEventListener('click', function(){
+//       selectedBird.splice(0,selectedBird.length);
+//       selectedBird.push(3);
+//       console.log(selectedBird);
+//   });
+//
+//   document.getElementById('birdValue4').addEventListener('click', function(){
+//       selectedBird.splice(0,selectedBird.length);
+//       selectedBird.push(4);
+//       console.log(selectedBird);
+//   });
+//
+//   document.getElementById('birdValue5').addEventListener('click', function(){
+//       selectedBird.splice(0,selectedBird.length);
+//       selectedBird.push(5);
+//       console.log(selectedBird);
+//   });
+//
+//   document.getElementById('birdValue6').addEventListener('click', function(){
+//       selectedBird.splice(0,selectedBird.length);
+//       selectedBird.push(6);
+//       console.log(selectedBird);
+//   });
+//
+//   document.getElementById('birdValue7').addEventListener('click', function(){
+//       selectedBird.splice(0,selectedBird.length);
+//       selectedBird.push(7);
+//       console.log(selectedBird);
+//   });
+//
+//   document.getElementById('birdValue8').addEventListener('click', function(){
+//       selectedBird.splice(0,selectedBird.length);
+//       selectedBird.push(8);
+//       console.log(selectedBird);
+//   });
+//
+//   document.getElementById('birdValue9').addEventListener('click', function(){
+//       selectedBird.splice(0,selectedBird.length);
+//       selectedBird.push(9);
+//       console.log(selectedBird);
+//   });
+//
+//   document.getElementById('birdValue10').addEventListener('click', function(){
+//       selectedBird.splice(0,selectedBird.length);
+//       selectedBird.push(10);
+//       console.log(selectedBird);
+//   });
+//
+//   document.getElementById('birdValue11').addEventListener('click', function(){
+//       selectedBird.splice(0,selectedBird.length);
+//       selectedBird.push(11);
+//       console.log(selectedBird);
+//   });
+//
+//   document.getElementById('birdValue12').addEventListener('click', function(){
+//       selectedBird.splice(0,selectedBird.length);
+//       selectedBird.push(12);
+//       console.log(selectedBird);
+//   });
+// }
 
 
 
@@ -716,6 +815,20 @@ function closeNav() {
 
 
 
+// for (var i = 0; i < birds.length; i++) {
+//   stringBV = (i + 1);
+//   stringBV = stringBV.toString();
+//   document.getElementById('"birdValue' + stringBV + '"').addEventListener('click', function(){
+//   console.log(stringBV);
+//       selectedBird.splice(0,selectedBird.length);
+//       selectedBird.push((i + 1));
+//       console.log(selectedBird);
+//   });
+// };
+
+
+
+
 
 
 // determines the order the cards are displayed in (arrows)
@@ -758,3 +871,5 @@ document.getElementById('sortChange').addEventListener('click', function(){
   sortBy();
 
 });
+
+// selectingBirds();
