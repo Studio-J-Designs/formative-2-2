@@ -53,8 +53,18 @@
   margin-left: 50px;
 }
 
+.modal-btn-fix {
+  width: 50%;
+  font-size: 60px;
+}
 
+.card-fix {
+  font-size: 40px;
+}
 
+#contentArea {
+  margin-left: 15%;
+}
 
 
 /* The Overlay (background) */
@@ -82,7 +92,7 @@
 }
 
 /* The navigation links inside the overlay */
-.overlay button {
+.overlay a {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
@@ -92,7 +102,7 @@
 }
 
 /* When you mouse over the navigation links, change their color */
-.overlay button:hover, .overlay button:focus {
+.overlay a:hover, .overlay a:focus {
   color: #f1f1f1;
 }
 
@@ -106,7 +116,7 @@
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
-  .overlay button {font-size: 20px}
+  .overlay a {font-size: 20px}
   .overlay .closebtn {
     font-size: 40px;
     top: 15px;
