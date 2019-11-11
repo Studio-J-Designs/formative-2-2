@@ -75,9 +75,10 @@ var birds = [
     island: 'Both',
     region: ['Northland', 'Auckland', 'Bay-of-Plenty', 'Manawatu', 'Wellington',  'West-Coast', 'Southland'],
     status: 'Unseen',
-    image: 'Kiwi.jpg',
+    image: 'kiwi.png',
     info: 'Blah',
     link: 'Blah',
+    value: 'birdValue1',
   },
   {
     name: 'Tui',
@@ -85,9 +86,10 @@ var birds = [
     island: 'Both',
     region: ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki', 'Manawatu', 'Hawkes-Bay', 'Wellington', 'Tasman', 'Nelson', 'Marlborough', 'West-Coast', 'Cantebury', 'Otago', 'Southland'],
     status: 'Unseen',
-    image: 'Tui.jpg',
+    image: 'tui.png',
     info: 'Blah',
     link: 'Blah',
+    value: 'birdValue2',
   },
   {
     name: 'Fantail',
@@ -95,9 +97,10 @@ var birds = [
     island: 'Both',
     region: ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki', 'Manawatu', 'Hawkes-Bay', 'Wellington', 'Tasman', 'Nelson', 'Marlborough', 'West-Coast', 'Cantebury', 'Otago', 'Southland'],
     status: 'Unseen',
-    image: 'Fantail.jpg',
+    image: 'fantail.png',
     info: 'Blah',
     link: 'Blah',
+    value: 'birdValue3',
   },
   {
     name: 'Kea',
@@ -105,9 +108,10 @@ var birds = [
     island: 'South',
     region: ['Tasman', 'West-Coast', 'Cantebury', 'Otago', 'Southland'],
     status: 'Unseen',
-    image: 'Kea.jpg',
+    image: 'kea.png',
     info: 'Blah',
     link: 'Blah',
+    value: 'birdValue4',
   },
   {
     name: 'Kaka',
@@ -115,9 +119,10 @@ var birds = [
     island: 'Both',
     region: ['Auckland', 'Waikato', 'Tasman', 'Nelson'],
     status: 'Unseen',
-    image: 'Kaka.jpg',
+    image: 'kaka.png',
     info: 'Blah',
     link: 'Blah',
+    value: 'birdValue5',
   },
   {
     name: 'Native Pigeon',
@@ -125,9 +130,10 @@ var birds = [
     island: 'Both',
     region: ['Auckland', 'Wellington', 'Otago', 'Southland'],
     status: 'Unseen',
-    image: 'Native Pigeon.jpg',
+    image: 'nativePigeon.png',
     info: 'Blah',
     link: 'Blah',
+    value: 'birdValue6',
   },
   {
     name: 'Takahe',
@@ -135,9 +141,10 @@ var birds = [
     island: 'Both',
     region: ['Auckland', 'Waikato', 'Hawkes-Bay', 'Wellington', 'Nelson', 'Cantebury', 'Otago', 'Southland'],
     status: 'Unseen',
-    image: 'Takahe.jpg',
+    image: 'takahe.png',
     info: 'Blah',
     link: 'Blah',
+    value: 'birdValue7',
   },
   {
     name: 'Kingfisher',
@@ -145,9 +152,10 @@ var birds = [
     island: 'Both',
     region: ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki', 'Manawatu', 'Hawkes-Bay', 'Wellington', 'Tasman', 'Nelson', 'Marlborough', 'Cantebury', 'Otago', 'Southland'],
     status: 'Unseen',
-    image: 'Kingfisher.jpg',
+    image: 'kingfisher.png',
     info: 'Blah',
     link: 'Blah',
+    value: 'birdValue8',
   },
   {
     name: 'Robin',
@@ -155,9 +163,10 @@ var birds = [
     island: 'North',
     region: ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki'],
     status: 'Unseen',
-    image: 'Robin.jpg',
+    image: 'robin.png',
     info: 'Blah',
     link: 'Blah',
+    value: 'birdValue9',
   },
   {
     name: 'Tomtit',
@@ -165,9 +174,10 @@ var birds = [
     island: 'Both',
     region: ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki', 'Manawatu', 'Hawkes-Bay', 'Wellington', 'Tasman', 'Nelson', 'Marlborough', 'West-Coast', 'Cantebury', 'Otago', 'Southland'],
     status: 'Unseen',
-    image: 'Tomtit.jpg',
+    image: 'tomtit.png',
     info: 'Blah',
     link: 'Blah',
+    value: 'birdValue10',
   },
   {
     name: 'Black Oyster Catcher',
@@ -175,9 +185,10 @@ var birds = [
     island: 'Both',
     region: ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Wellington',  'Nelson', 'Marlborough', 'Southland'],
     status: 'Unseen',
-    image: 'Black Oyster Catcher.jpg',
+    image: 'blackOysterCatcher.png',
     info: 'Blah',
     link: 'Blah',
+    value: 'birdValue11',
   },
   {
     name: 'Weka',
@@ -185,9 +196,10 @@ var birds = [
     island: 'Both',
     region: ['Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Hawkes-Bay', 'Tasman', 'Nelson', 'Marlborough'],
     status: 'Unseen',
-    image: 'Weka.jpg',
+    image: 'weka.png',
     info: 'Blah',
     link: 'Blah',
+    value: 'birdValue12',
   },
 ]
 
@@ -203,8 +215,7 @@ var islandArray = ['North', 'South'];
 
 var regionArray = ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki', 'Manawatu', 'Hawkes-Bay', 'Wellington', 'Tasman', 'Nelson', 'Marlborough', 'West-Coast', 'Cantebury', 'Otago', 'Southland'];
 
-var selectedBird = [1];
-var stringBV = 1;
+var birdExpand = ['birdValue1'];
 
 // Island Modal
 
@@ -604,23 +615,23 @@ function writeFencers(){
 //   console.log(numbers);
 // };
 
-var funcs = [];
-
-function createfunc(i){
-  return function(){
-    console.log(birds[i].number);
-    // document.getElementById('birdValue' + (i + 1) + '').addEventListener('click', function(){
-    // selectedBird.splice(0,selectedBird.length);
-    // selectedBird.push(birds[i].number);
-    // console.log(selectedBird);
-    // });
-  };
-};
-
-for (var j = 0; j < 3; j++) {
-  // and now let's run each one to see
-  funcs[j]();
-}
+// var funcs = [];
+//
+// function createfunc(i){
+//   return function(){
+//     console.log(birds[i].number);
+//     // document.getElementById('birdValue' + (i + 1) + '').addEventListener('click', function(){
+//     // selectedBird.splice(0,selectedBird.length);
+//     // selectedBird.push(birds[i].number);
+//     // console.log(selectedBird);
+//     // });
+//   };
+// };
+//
+// for (var j = 0; j < 3; j++) {
+//   // and now let's run each one to see
+//   funcs[j]();
+// }
 
 
 
@@ -631,9 +642,9 @@ function profileMaker(){
   for (var i = 0; i < birds.length; i++) {
     for (var j = 0; j < numbers.length; j++) {
       if (birds[i].number === numbers[j]) {
-        funcs[i] = createfunc(i);
+        // funcs[i] = createfunc(i);
         document.getElementById('profiles').innerHTML
-        +=  '<div id="birdValue' + birds[i].number + '" class="card mb-3 card-fix" style="max-width: 540px;"><div class="row no-gutters"><div class="col-md-4"><img src="assets/images/'
+        +=  '<div id="birdValue' + birds[i].number + '" class="card mb-3 card-fix birdClass" style="max-width: 540px;"><div class="row no-gutters"><div class="col-md-4"><img src="assets/images/'
         + birds[i].image
         + '" class="card-img" alt="'
         + birds[i].name
@@ -648,10 +659,45 @@ function profileMaker(){
     };
   };
   console.log(numbers);
+  $('.birdClass').on('click', function(){
+    birdExpand.splice(0,birdExpand.length);
+    birdExpand.push(this.id);
+    console.log(birdExpand);
+  });
+};
+
+var statusChoosen = ['Unseen'];
+
+function birdExpanded(){
+  for (var i = 0; i < birds.length; i++) {
+    if (birds[i].value = birdExpand) {
+      document.getElementById('sortBy').innerHTML
+      = '<h3 class="titleSB"> Status: </h3><div id="sortChange"><button type="button" class="btn btn-outline-danger order-btn-fix unseen">'
+      + birds[i].status
+      + '</button></div>';
+
+      document.getElementById('contentArea').innerHTML
+      = ' ';
+    }
+  }
 };
 
 
 
+document.getElementById('submit').addEventListener('click', function(){
+    birdExpanded()
+    console.log(birds[i].status);
+});
+
+$('.unseen').on('click', function(){
+  for (var i = 0; i < birds.length; i++) {
+    if (birds[i].value = birdExpand) {
+      birds[i].status = 'Seen';
+      console.log(birds[i].status);
+    }
+  };
+  birdExpanded();
+});
 
 // function selectingBirds(){
 //   document.getElementById('birdValue1').addEventListener('click', function(){
