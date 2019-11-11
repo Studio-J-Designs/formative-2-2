@@ -181,9 +181,23 @@
 
 .swiper-slide {
   background-position: center;
-  background-size: 250px;
+  background-size: 325px;
   background-repeat: no-repeat;
   width: 500px;
   height: 500px; }
+
+.textFix {
+  font-size: 30px; }
+
+.backButtonFix {
+  font-size: 50px;
+  float: left; }
+
+.infoButtonFix {
+  font-size: 50px;
+  float: right; }
+
+.submitButtonFix {
+  font-size: 50px; }
 
 /*# sourceMappingURL=master.css.map */

@@ -71,134 +71,146 @@ window.onclick = function(event) {
 var birds = [
   {
     name: 'Kiwi',
+    scienceName: 'Apteryx mantelli',
     number: 01,
     island: 'Both',
     region: ['Northland', 'Auckland', 'Bay-of-Plenty', 'Manawatu', 'Wellington',  'West-Coast', 'Southland'],
     status: 'Unseen',
     image: 'kiwi.png',
-    info: 'Blah',
-    link: 'Blah',
+    info: 'North Island brown kiwi have disappeared from many lowland sites and around the fringes of their distribution, through a combination of habitat loss and predation by mammalian predators, especially dogs, ferrets and stoats.',
+    link: 'north-island-brown-kiwi',
     value: 'birdValue1',
   },
   {
     name: 'Tui',
+    scienceName: 'Prosthemadera novaeseelandiae',
     number: 02,
     island: 'Both',
     region: ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki', 'Manawatu', 'Hawkes-Bay', 'Wellington', 'Tasman', 'Nelson', 'Marlborough', 'West-Coast', 'Cantebury', 'Otago', 'Southland'],
     status: 'Unseen',
     image: 'tui.png',
-    info: 'Blah',
-    link: 'Blah',
+    info: 'Tui were the most common passerine found in Maori middens and were probably once an important source of protein. Despite the loss of the vast majority of lowland forest in New Zealand, tui have probably benefitted from the introduction to New Zealand of a variety of flowering and fruiting plants. These new species.',
+    link: 'tui',
     value: 'birdValue2',
   },
   {
     name: 'Fantail',
+    scienceName: 'Rhipidura fuliginosa',
     number: 03,
     island: 'Both',
     region: ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki', 'Manawatu', 'Hawkes-Bay', 'Wellington', 'Tasman', 'Nelson', 'Marlborough', 'West-Coast', 'Cantebury', 'Otago', 'Southland'],
     status: 'Unseen',
     image: 'fantail.png',
-    info: 'Blah',
-    link: 'Blah',
+    info: 'The fantail is one of the few native forest bird species that has coped reasonably well with the extensive conversion of lowland native forest to farmland. However, nesting adults, eggs and chicks are not immune from being preyed upon by introduced mammalian pests, particularly by ship rats.',
+    link: 'new-zealand-fantail',
     value: 'birdValue3',
   },
   {
     name: 'Kea',
+    scienceName: 'Nestor notabilis',
     number: 04,
     island: 'South',
     region: ['Tasman', 'West-Coast', 'Cantebury', 'Otago', 'Southland'],
     status: 'Unseen',
     image: 'kea.png',
-    info: 'Blah',
-    link: 'Blah',
+    info: 'Contemporary threats include introduced mammalian predators, environmental lead, and conflict and accidents with humans and their equipment. Episodic, semi-catastrophic mortality events are thought to be associated with plagues of stoats which ensue after mast seeding of beech and rimu.',
+    link: 'kea',
     value: 'birdValue4',
   },
   {
     name: 'Kaka',
+    scienceName: 'Nestor meridionalis',
     number: 05,
     island: 'Both',
     region: ['Auckland', 'Waikato', 'Tasman', 'Nelson'],
     status: 'Unseen',
     image: 'kaka.png',
-    info: 'Blah',
-    link: 'Blah',
+    info: 'Although forest clearance has destroyed all but a fraction of the kaka’s former habitat, the biggest threat to their survival is introduced mammalian predators, particularly the stoat, but also the brushtail possum. It is predation by these pests, particularly of nesting females, that is the reason for general rarity of kaka on the main islands compared to their forested offshore island strongholds.',
+    link: 'kaka',
     value: 'birdValue5',
   },
   {
     name: 'Native Pigeon',
+    scienceName: 'Hemiphaga novaeseelandiae',
     number: 06,
     island: 'Both',
     region: ['Auckland', 'Wellington', 'Otago', 'Southland'],
     status: 'Unseen',
     image: 'nativePigeon.png',
-    info: 'Blah',
-    link: 'Blah',
+    info: 'Although a major issue for conservation of the kereru in the early 1900s, habitat loss probably has little impact on regional populations today. The main threat to kereru is predation by introduced mammalian predators, particularly feral cats, possums, stoats and ship rats, especially when nesting.',
+    link: 'new-zealand-pigeon',
     value: 'birdValue6',
   },
   {
     name: 'Takahe',
+    scienceName: 'Porphyrio hochstetteri',
     number: 07,
     island: 'Both',
     region: ['Auckland', 'Waikato', 'Hawkes-Bay', 'Wellington', 'Nelson', 'Cantebury', 'Otago', 'Southland'],
     status: 'Unseen',
     image: 'takahe.png',
-    info: 'Blah',
-    link: 'Blah',
+    info: 'Natural hazards influencing the Fiordland takahē population include avalanches and cold climate. Modern threats include predation by introduced stoats, and competition for food from introduced red deer. Deer numbers have been controlled to low levels since 1980, allowing tussock grasslands to slowly recover their original size and nutrients.',
+    link: 'south-island-takahe',
     value: 'birdValue7',
   },
   {
     name: 'Kingfisher',
+    scienceName: 'Todiramphus sanctus',
     number: 08,
     island: 'Both',
     region: ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki', 'Manawatu', 'Hawkes-Bay', 'Wellington', 'Tasman', 'Nelson', 'Marlborough', 'Cantebury', 'Otago', 'Southland'],
     status: 'Unseen',
     image: 'kingfisher.png',
-    info: 'Blah',
-    link: 'Blah',
+    info: 'It isn\'t threatened. Yay.',
+    link: 'sacred-kingfisher',
     value: 'birdValue8',
   },
   {
     name: 'Robin',
+    scienceName: 'Petroica longipes ',
     number: 09,
     island: 'North',
     region: ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki'],
     status: 'Unseen',
     image: 'robin.png',
-    info: 'Blah',
-    link: 'Blah',
+    info: 'Forest clearance for farmland during the 19th and 20th centuries resulted in loss of habitat of the North Island robin. Today the main threat to its conservation is predation by introduced mammalian predators, such as feral cats, stoats, possums, and particularly the ubiquitous and arboreal ship rat.',
+    link: 'north-island-robin',
     value: 'birdValue9',
   },
   {
     name: 'Tomtit',
+    scienceName: 'Petroica macrocephala',
     number: 10,
     island: 'Both',
     region: ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki', 'Manawatu', 'Hawkes-Bay', 'Wellington', 'Tasman', 'Nelson', 'Marlborough', 'West-Coast', 'Cantebury', 'Otago', 'Southland'],
     status: 'Unseen',
     image: 'tomtit.png',
-    info: 'Blah',
-    link: 'Blah',
+    info: 'Presently, the main threat to populations on North and South Islands is from introduced mammalian predators, particularly ship rats. While many clutches and broods are taken by predators, adult females also suffer mortality because they alone incubate clutches and brood young, and their habit of nesting in shallow cavities means that they are not always able to escape once a predator arrives at the nest.',
+    link: 'tomtit',
     value: 'birdValue10',
   },
   {
     name: 'Black Oyster Catcher',
+    scienceName: 'Haematopus chathamensis',
     number: 11,
     island: 'Both',
     region: ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Wellington',  'Nelson', 'Marlborough', 'Southland'],
     status: 'Unseen',
     image: 'blackOysterCatcher.png',
-    info: 'Blah',
-    link: 'Blah',
+    info: 'The most significant threat to Chatham Island oystercatchers on Chatham and Pitt Islands is predation by introduced cats. Cats prey on eggs and chicks, and to a lesser extent, adults. Introduced weka also prey on eggs. Trampling of nests by farm animals also occurs.',
+    link: 'chatham-island-oystercatcher',
     value: 'birdValue11',
   },
   {
     name: 'Weka',
+    scienceName: 'Gallirallus australis',
     number: 12,
     island: 'Both',
     region: ['Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Hawkes-Bay', 'Tasman', 'Nelson', 'Marlborough'],
     status: 'Unseen',
     image: 'weka.png',
-    info: 'Blah',
-    link: 'Blah',
+    info: 'The main recognised threats are starvation during droughts, and predation by mustelids, especially ferrets.  Weka are often killed by uncontrolled dogs, and are legally hunted on the Chatham Islands and on some muttonbird islands.',
+    link: 'weka',
     value: 'birdValue12',
   },
 ]
@@ -223,9 +235,8 @@ var sortChange = 'Numeric';
 // var cards = ['Kiwi', 'Tui', 'Fantail', 'Kea', 'Kaka', 'Native Pigeon', 'Takahe', 'Kingfisher', 'Robin', 'Tomtit', 'Black Oyster Catcher', 'Weka'];
 var numbers = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12];
 var islandArray = ['North', 'South'];
-
 var regionArray = ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki', 'Manawatu', 'Hawkes-Bay', 'Wellington', 'Tasman', 'Nelson', 'Marlborough', 'West-Coast', 'Cantebury', 'Otago', 'Southland'];
-
+var statusArray = ['Seen', 'Unseen']
 var birdExpand = ['birdValue1'];
 
 // Island Modal
@@ -257,7 +268,14 @@ for (var n = 0; n < regionArray.length; n++) {
     + '</button>'
   }
 };
-console.log(regionArray);
+
+//Status Modal
+
+for (var i = 0; i < statusArray.length; i++) {
+  document.getElementById('statusContent').innerHTML
+
+  += '<button id="' + statusArray[i] + '" class="btn btn-info modal-btn-fix">' + statusArray[i] + '</button>'
+};
 
 document.getElementById('all').addEventListener('click', function(){
   numbers.splice(0,numbers.length);
@@ -270,7 +288,31 @@ document.getElementById('all').addEventListener('click', function(){
   modal1.style.display = "none";
 });
 
+document.getElementById('Seen').addEventListener('click', function(){
+  numbers.splice(0,numbers.length);
+  for (var i = 0; i < birds.length; i++) {
+    if (birds[i].status === 'Seen') {
+        numbers.push(birds[i].number);
+    }
+  }
+  clear();
+  profileMaker();
+  closeNav();
+  modal3.style.display = "none";
+});
 
+document.getElementById('Unseen').addEventListener('click', function(){
+  numbers.splice(0,numbers.length);
+  for (var i = 0; i < birds.length; i++) {
+    if (birds[i].status === 'Unseen') {
+        numbers.push(birds[i].number);
+    }
+  }
+  clear();
+  profileMaker();
+  closeNav();
+  modal3.style.display = "none";
+});
 
 
 
@@ -660,9 +702,9 @@ function profileMaker(){
         + '" class="card-img" alt="'
         + birds[i].name
         + '"></div><div class="col-md-8"<div class="card-body"><h5 class="card-title">'
-        + birds[i].name
+        + birds[i].scienceName
         + '</h5><p class="card-text">'
-        + birds[i].info
+        + birds[i].name
         + '</p><p class="card-text"><small class="text-muted">'
         + birds[i].number
         + '</small></p></div></div></div></div>';
@@ -680,6 +722,7 @@ function profileMaker(){
 var currentRegions = [];
 var galleryArray = [];
 var finalGalleryArray = [];
+var regionText = [];
 
 function birdExpanded(){
   for (var i = 0; i < birds.length; i++) {
@@ -688,9 +731,13 @@ function birdExpanded(){
       currentRegions = [];
       galleryArray = [];
       finalGalleryArray = [];
+      regionText = [];
 
       currentRegions = birds[i].region;
       console.log(currentRegions);
+
+      regionText = currentRegions.join(', ');
+      console.log(regionText);
 
       for (var j = 0; j < currentRegions.length; j++) {
         galleryArray.push('<div class="swiper-slide" style="background-image:url(assets/images/'
@@ -723,13 +770,17 @@ function birdExpanded(){
       + birds[i].image
       + '" class="card-img" alt="'
       + birds[i].name
-      + '"></div><div class="column">'
+      + '"></div><div class="column"><p class="textFix"> Conservation Status: <br><br>'
       + birds[i].info
-      + '</div></div><div class="row"><div class="column"><p>'
-      + birds[i].region
-      + '</p></div><div class="column"><div class="swiper-container"><div class="swiper-wrapper">'
+      + '</p></div></div><div class="row"><div class="column"><p class="textFix"><br>The '
+      + birds[i].name
+      + ' can be found in the following regions: <br><br>'
+      + regionText
+      + '.</p></div><div class="column"><div class="swiper-container"><div class="swiper-wrapper">'
       + finalGalleryArray
-      + '</div></div></div></div><button onclick="back()" id="back" type="button" class="btn btn-success">Back</button>';
+      + '</div></div></div></div><button onclick="back()" id="back" type="button" class="btn btn-success backButtonFix">Back</button><a class="btn btn-success infoButtonFix" href="http://nzbirdsonline.org.nz/species/'
+      + birds[i].link
+      + '">Info Link</a>';
 
       swiperNo();
     }
@@ -757,7 +808,7 @@ function back(){
   ='<h3 class="titleSB"> Sort By: </h3><div onclick="wayChangeFunction()" id="wayChange" class=""><img class="wayChange" src="assets/images/down.png" alt=""></div><div id="sortChange"><button onclick="sortChangeFunction()" type="button" class="btn btn-outline-info order-btn-fix">  &nbsp; Numeric &nbsp;  </button></div>';
 
   document.getElementById('contentArea').innerHTML
-  = '<h2> INDEX</h2><div id="profiles"></div><button onclick="submit()" id="submit" type="button" class="btn btn-success">Submit</button>';
+  = '<h2> INDEX</h2><div id="profiles"></div><br><br><button onclick="submit()" id="submit" type="button" class="btn btn-success submitButtonFix">Submit</button>';
 
   profileMaker();
 };
