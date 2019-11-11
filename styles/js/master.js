@@ -1,3 +1,5 @@
+// modal codes and vars
+
 var modal1 = document.getElementById("modal1");
 var btn1 = document.getElementById("btn1");
 var span1 = document.getElementsByClassName("close1")[0];
@@ -9,25 +11,6 @@ var span2 = document.getElementsByClassName("close2")[0];
 var modal3 = document.getElementById("modal3");
 var btn3 = document.getElementById("btn3");
 var span3 = document.getElementsByClassName("close3")[0];
-
-// var modals = [modal1, modal2, modal3];
-// var buttons = [btn1, btn2, btn3];
-// var spans = [span1, span2, span3];
-//
-// for (var i = 0; i < modals.legnth; i++) {
-//   buttons[i].onclick = function() {
-//     modals[i].style.display = "block";
-//   };
-//   spans[i].onclick = function() {
-//     modals[i].style.display = "none";
-//   };
-//   window.onclick = function(event) {
-//    if (event.target == modals[i]) {
-//      modals[i].style.display = "none";
-//    };
-//  }
-// };
-
 
 btn1.onclick = function() {
   modal1.style.display = "block";
@@ -66,7 +49,7 @@ window.onclick = function(event) {
   }
 }
 
-
+// main array for birds
 
 var birds = [
   {
@@ -215,6 +198,7 @@ var birds = [
   },
 ]
 
+// code for carosel
 
 function swiperNo(){
 var swiper = new Swiper('.swiper-container', {
@@ -230,9 +214,10 @@ var swiper = new Swiper('.swiper-container', {
 
 swiperNo();
 
+// other vars
+
 var wayChange = 'down';
 var sortChange = 'Numeric';
-// var cards = ['Kiwi', 'Tui', 'Fantail', 'Kea', 'Kaka', 'Native Pigeon', 'Takahe', 'Kingfisher', 'Robin', 'Tomtit', 'Black Oyster Catcher', 'Weka'];
 var numbers = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12];
 var islandArray = ['North', 'South'];
 var regionArray = ['Northland', 'Auckland', 'Waikato', 'Bay-of-Plenty', 'Gisborne', 'Taranaki', 'Manawatu', 'Hawkes-Bay', 'Wellington', 'Tasman', 'Nelson', 'Marlborough', 'West-Coast', 'Cantebury', 'Otago', 'Southland'];
@@ -277,6 +262,8 @@ for (var i = 0; i < statusArray.length; i++) {
   += '<button id="' + statusArray[i] + '" class="btn btn-info modal-btn-fix">' + statusArray[i] + '</button>'
 };
 
+// all reset code
+
 document.getElementById('all').addEventListener('click', function(){
   numbers.splice(0,numbers.length);
   for (var i = 0; i < birds.length; i++) {
@@ -287,6 +274,8 @@ document.getElementById('all').addEventListener('click', function(){
   closeNav();
   modal1.style.display = "none";
 });
+
+//status Filter
 
 document.getElementById('Seen').addEventListener('click', function(){
   numbers.splice(0,numbers.length);
@@ -313,7 +302,6 @@ document.getElementById('Unseen').addEventListener('click', function(){
   closeNav();
   modal3.style.display = "none";
 });
-
 
 
 // North Island Filter
@@ -352,30 +340,6 @@ document.getElementById('South').addEventListener('click', function(){
 
 
 // Region filters
-
-
-// for (var k = 0; k < regionArray.length; k++) {
-//   document.getElementById(regionArray[k]).addEventListener('click', function(){
-//     numbers.splice(0,numbers.length);
-//     console.log(numbers);
-//     for (var l = 0; l < birds.length; l++) {
-//       for (var m = 0; m < 16; m++) {
-//         if (birds[l].region[m] === regionArray[l]) {
-//             numbers.push(birds[l].number);
-//             console.log(birds[l].region[m]);
-//             console.log(birds[l].number);
-//             console.log(regionArray[l]);
-//           };
-//
-//         };
-//       };
-//     clear();
-//     profileMaker();
-//     closeNav();
-//     modal2.style.display = "none";
-//   });
-// };
-
 
 document.getElementById('Northland').addEventListener('click', function(){
   numbers.splice(0,numbers.length);
@@ -618,84 +582,12 @@ document.getElementById('Southland').addEventListener('click', function(){
 });
 
 
-
-
-
-/*
-
-// Function to clear printed table
-function clear(){
-    document.getElementById('registryResults').innerHTML = '';
-}
-
-// Creating table heading
-function tableHeading(){
-    document.getElementById('registryResults').innerHTML +=
-    '<thead class="thead-dark">' +
-        '<tr>' +
-            '<th>Name</th>' +
-            '<th>Age</th>' +
-            '<th>Weapon</th>' +
-        '</tr>' +
-    '</thead>';
-}
-
-// Function that writes appropriate information to results table
-function writeFencers(){
-    document.getElementById('registryResults').innerHTML +=
-    '<tr>' +
-        '<td>' + fencer[i].lastName + ', ' + fencer[i].firstName + '</td>' +
-        '<td>' + fencer[i].age + '</td>' +
-        '<td>' + fencer[i].weapon[0] + '</td>' +
-    '</tr>';
-}
-
-*/
-
-
-// function profileMaker(){
-//   for (var i = 0; i < birds.length; i++) {
-//     for (var j = 0; j < numbers.length; j++) {
-//       if (birds[i].number === numbers[j]) {
-//         document.getElementById('profiles').innerHTML
-//         +=  '<option value="'+ [(i + 1)] + '">'
-//         + birds[i].name
-//         + birds[i].number
-//         + '</option>';
-//       }
-//     }
-//   }
-//   console.log(numbers);
-// };
-
-// var funcs = [];
-//
-// function createfunc(i){
-//   return function(){
-//     console.log(birds[i].number);
-//     // document.getElementById('birdValue' + (i + 1) + '').addEventListener('click', function(){
-//     // selectedBird.splice(0,selectedBird.length);
-//     // selectedBird.push(birds[i].number);
-//     // console.log(selectedBird);
-//     // });
-//   };
-// };
-//
-// for (var j = 0; j < 3; j++) {
-//   // and now let's run each one to see
-//   funcs[j]();
-// }
-
-
-
-
-
+// Baisc card maker
 
 function profileMaker(){
   for (var i = 0; i < birds.length; i++) {
     for (var j = 0; j < numbers.length; j++) {
       if (birds[i].number === numbers[j]) {
-        // funcs[i] = createfunc(i);
         document.getElementById('profiles').innerHTML
         +=  '<div id="birdValue' + birds[i].number + '" class="card mb-3 card-fix birdClass" style="max-width: 540px;"><div class="row no-gutters"><div class="col-md-4"><img src="assets/images/'
         + birds[i].image
@@ -719,10 +611,14 @@ function profileMaker(){
   });
 };
 
+// adition vars for code
+
 var currentRegions = [];
 var galleryArray = [];
 var finalGalleryArray = [];
 var regionText = [];
+
+//code making each individual expanded profile
 
 function birdExpanded(){
   for (var i = 0; i < birds.length; i++) {
@@ -787,6 +683,8 @@ function birdExpanded(){
   }
 };
 
+// changes a birds status
+
 function status(){
   console.log('test');
   for (var i = 0; i < birds.length; i++) {
@@ -803,6 +701,8 @@ function status(){
   birdExpanded();
 };
 
+// the back button
+
 function back(){
   document.getElementById('sortBy').innerHTML
   ='<h3 class="titleSB"> Sort By: </h3><div onclick="wayChangeFunction()" id="wayChange" class=""><img class="wayChange" src="assets/images/down.png" alt=""></div><div id="sortChange"><button onclick="sortChangeFunction()" type="button" class="btn btn-outline-info order-btn-fix">  &nbsp; Numeric &nbsp;  </button></div>';
@@ -813,114 +713,14 @@ function back(){
   profileMaker();
 };
 
+//submit button
 
 function submit(){
     birdExpanded();
     console.log(birds[i].status);
 };
 
-// $('.unseen').on('click', function(){
-// console.log('test');
-//   for (var i = 0; i < birds.length; i++) {
-//     if (birds[i].value = birdExpand) {
-//       birds[i].status = 'Seen';
-//       console.log(birds[i].status);
-//     }
-//   };
-//   birdExpanded();
-// });
-
-// function selectingBirds(){
-//   document.getElementById('birdValue1').addEventListener('click', function(){
-//       selectedBird.splice(0,selectedBird.length);
-//       selectedBird.push(1);
-//       console.log(selectedBird);
-//   });
-//
-//   document.getElementById('birdValue2').addEventListener('click', function(){
-//       selectedBird.splice(0,selectedBird.length);
-//       selectedBird.push(2);
-//       console.log(selectedBird);
-//   });
-//
-//   document.getElementById('birdValue3').addEventListener('click', function(){
-//       selectedBird.splice(0,selectedBird.length);
-//       selectedBird.push(3);
-//       console.log(selectedBird);
-//   });
-//
-//   document.getElementById('birdValue4').addEventListener('click', function(){
-//       selectedBird.splice(0,selectedBird.length);
-//       selectedBird.push(4);
-//       console.log(selectedBird);
-//   });
-//
-//   document.getElementById('birdValue5').addEventListener('click', function(){
-//       selectedBird.splice(0,selectedBird.length);
-//       selectedBird.push(5);
-//       console.log(selectedBird);
-//   });
-//
-//   document.getElementById('birdValue6').addEventListener('click', function(){
-//       selectedBird.splice(0,selectedBird.length);
-//       selectedBird.push(6);
-//       console.log(selectedBird);
-//   });
-//
-//   document.getElementById('birdValue7').addEventListener('click', function(){
-//       selectedBird.splice(0,selectedBird.length);
-//       selectedBird.push(7);
-//       console.log(selectedBird);
-//   });
-//
-//   document.getElementById('birdValue8').addEventListener('click', function(){
-//       selectedBird.splice(0,selectedBird.length);
-//       selectedBird.push(8);
-//       console.log(selectedBird);
-//   });
-//
-//   document.getElementById('birdValue9').addEventListener('click', function(){
-//       selectedBird.splice(0,selectedBird.length);
-//       selectedBird.push(9);
-//       console.log(selectedBird);
-//   });
-//
-//   document.getElementById('birdValue10').addEventListener('click', function(){
-//       selectedBird.splice(0,selectedBird.length);
-//       selectedBird.push(10);
-//       console.log(selectedBird);
-//   });
-//
-//   document.getElementById('birdValue11').addEventListener('click', function(){
-//       selectedBird.splice(0,selectedBird.length);
-//       selectedBird.push(11);
-//       console.log(selectedBird);
-//   });
-//
-//   document.getElementById('birdValue12').addEventListener('click', function(){
-//       selectedBird.splice(0,selectedBird.length);
-//       selectedBird.push(12);
-//       console.log(selectedBird);
-//   });
-// }
-
-
-
-
-// function profileMaker(){
-//   for (var i = 0; i < birds.length; i++) {
-//     for (var j = 0; j < numbers.length; j++) {
-//       if (birds[i].number === numbers[j]) {
-//         document.getElementById('profiles').innerHTML
-//         +=  '<div>'
-//         + birds[i].name
-//         + birds[i].number
-//         + '</div>';
-//       }
-//     }
-//   }
-//   console.log(numbers);
-// };
+// basic clear function
 
 function clear(){
     document.getElementById('profiles').innerHTML = '';
@@ -974,6 +774,8 @@ function sortBy(){
   profileMaker();
 }
 
+// first launched look
+
 profileMaker();
 
 
@@ -987,25 +789,6 @@ function openNav() {
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 };
-
-
-
-
-
-// for (var i = 0; i < birds.length; i++) {
-//   stringBV = (i + 1);
-//   stringBV = stringBV.toString();
-//   document.getElementById('"birdValue' + stringBV + '"').addEventListener('click', function(){
-//   console.log(stringBV);
-//       selectedBird.splice(0,selectedBird.length);
-//       selectedBird.push((i + 1));
-//       console.log(selectedBird);
-//   });
-// };
-
-
-
-
 
 
 // determines the order the cards are displayed in (arrows)
@@ -1048,5 +831,3 @@ function sortChangeFunction(){
   sortBy();
 
 };
-
-// selectingBirds();
