@@ -728,6 +728,9 @@ function birdExpanded(){
   for (var i = 0; i < birds.length; i++) {
     if (birds[i].value == birdExpand) {
 
+      document.getElementById('headingSection').innerHTML
+      = '<img id="logo" src="assets/images/logo.jpg" alt="">';
+
       currentRegions = [];
       galleryArray = [];
       finalGalleryArray = [];
@@ -804,6 +807,9 @@ function status(){
 };
 
 function back(){
+  document.getElementById('headingSection').innerHTML
+  = '<img id="logo" src="assets/images/logo.jpg" alt=""><span onclick="openNav()"><button type="button" class="btn btn-outline-info filter-btn-fix"> &nbsp; Filter By &nbsp; </button></span>';
+
   document.getElementById('sortBy').innerHTML
   ='<h3 class="titleSB"> Sort By: </h3><div onclick="wayChangeFunction()" id="wayChange" class=""><img class="wayChange" src="assets/images/down.png" alt=""></div><div id="sortChange"><button onclick="sortChangeFunction()" type="button" class="btn btn-outline-info order-btn-fix">  &nbsp; Numeric &nbsp;  </button></div>';
 
