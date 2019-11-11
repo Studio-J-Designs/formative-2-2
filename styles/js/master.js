@@ -204,8 +204,19 @@ var birds = [
 ]
 
 
+function swiperNo(){
+var swiper = new Swiper('.swiper-container', {
+     centeredSlides: true,
+     slidesPerView: 'auto',
+     loop: true,
+     autoplay: {
+       delay: 2500,
+       disableOnInteraction: false,
+     },
+   });
+};
 
-
+swiperNo();
 
 var wayChange = 'down';
 var sortChange = 'Numeric';
@@ -666,38 +677,107 @@ function profileMaker(){
   });
 };
 
-var statusChoosen = ['Unseen'];
+var currentRegions = [];
+var galleryArray = [];
+var finalGalleryArray = [];
 
 function birdExpanded(){
   for (var i = 0; i < birds.length; i++) {
-    if (birds[i].value = birdExpand) {
-      document.getElementById('sortBy').innerHTML
-      = '<h3 class="titleSB"> Status: </h3><div id="sortChange"><button type="button" class="btn btn-outline-danger order-btn-fix unseen">'
-      + birds[i].status
-      + '</button></div>';
+    if (birds[i].value == birdExpand) {
+
+      currentRegions = [];
+      galleryArray = [];
+      finalGalleryArray = [];
+
+      currentRegions = birds[i].region;
+      console.log(currentRegions);
+
+      for (var j = 0; j < currentRegions.length; j++) {
+        galleryArray.push('<div class="swiper-slide" style="background-image:url(assets/images/'
+        + currentRegions[j] + '.jpg)"></div>');
+        console.log(currentRegions[j]);
+      };
+
+      finalGalleryArray = galleryArray.join('');
+      console.log(finalGalleryArray);
 
       document.getElementById('contentArea').innerHTML
-      = ' ';
+      = '<div class="contentAreaFix"><div id="profiles"></div></div>';
+
+
+
+      if (birds[i].status == 'Unseen') {
+        document.getElementById('sortBy').innerHTML
+        = '<h3 class="titleSB"> Status: </h3><div id=""><button onclick="status()" type="button" class="btn btn-outline-danger order-btn-fix">'
+        + birds[i].status
+        + '</button></div>';
+      } else if (birds[i].status == 'Seen') {
+        document.getElementById('sortBy').innerHTML
+        = '<h3 class="titleSB"> Status: </h3><div id=""><button onclick="status()" type="button" class="btn btn-outline-success order-btn-fix"> &nbsp;&nbsp;'
+        + birds[i].status
+        + '&nbsp;&nbsp;</button></div>';
+      }
+
+      document.getElementById('profiles').innerHTML
+      = '<div class="row"><div class="column"><img src="assets/images/'
+      + birds[i].image
+      + '" class="card-img" alt="'
+      + birds[i].name
+      + '"></div><div class="column">'
+      + birds[i].info
+      + '</div></div><div class="row"><div class="column"><p>'
+      + birds[i].region
+      + '</p></div><div class="column"><div class="swiper-container"><div class="swiper-wrapper">'
+      + finalGalleryArray
+      + '</div></div></div></div><button onclick="back()" id="back" type="button" class="btn btn-success">Back</button>';
+
+      swiperNo();
     }
   }
 };
 
-
-
-document.getElementById('submit').addEventListener('click', function(){
-    birdExpanded()
-    console.log(birds[i].status);
-});
-
-$('.unseen').on('click', function(){
+function status(){
+  console.log('test');
   for (var i = 0; i < birds.length; i++) {
-    if (birds[i].value = birdExpand) {
-      birds[i].status = 'Seen';
-      console.log(birds[i].status);
-    }
+    if (birds[i].value == birdExpand) {
+      if (birds[i].status === 'Unseen') {
+        birds[i].status = 'Seen'
+        console.log(birds[i].status);
+      } else {
+          birds[i].status = 'Unseen'
+          console.log(birds[i].status);
+      };
+    };
   };
   birdExpanded();
-});
+};
+
+function back(){
+  document.getElementById('sortBy').innerHTML
+  ='<h3 class="titleSB"> Sort By: </h3><div onclick="wayChangeFunction()" id="wayChange" class=""><img class="wayChange" src="assets/images/down.png" alt=""></div><div id="sortChange"><button onclick="sortChangeFunction()" type="button" class="btn btn-outline-info order-btn-fix">  &nbsp; Numeric &nbsp;  </button></div>';
+
+  document.getElementById('contentArea').innerHTML
+  = '<h2> INDEX</h2><div id="profiles"></div><button onclick="submit()" id="submit" type="button" class="btn btn-success">Submit</button>';
+
+  profileMaker();
+};
+
+
+function submit(){
+    birdExpanded();
+    console.log(birds[i].status);
+};
+
+// $('.unseen').on('click', function(){
+// console.log('test');
+//   for (var i = 0; i < birds.length; i++) {
+//     if (birds[i].value = birdExpand) {
+//       birds[i].status = 'Seen';
+//       console.log(birds[i].status);
+//     }
+//   };
+//   birdExpanded();
+// });
 
 // function selectingBirds(){
 //   document.getElementById('birdValue1').addEventListener('click', function(){
@@ -879,7 +959,7 @@ function closeNav() {
 
 // determines the order the cards are displayed in (arrows)
 
-document.getElementById('wayChange').addEventListener('click', function(){
+ function wayChangeFunction(){
 
   if (wayChange === 'down') {
       wayChange = 'up';
@@ -893,29 +973,29 @@ document.getElementById('wayChange').addEventListener('click', function(){
 
     sortBy();
 
-});
+};
 
 // determines the order the cards are displayed in (numbers/alphabet)
 
-document.getElementById('sortChange').addEventListener('click', function(){
+function sortChangeFunction(){
 
   if (sortChange === 'Numeric') {
       sortChange = 'Alphabetic';
 
       document.getElementById('sortChange').innerHTML
 
-      =  '<button type="button" class="btn btn-outline-info order-btn-fix"> &nbsp' + sortChange + '&nbsp </button>';
+      =  '<button onclick="sortChangeFunction()" type="button" class="btn btn-outline-info order-btn-fix"> &nbsp;' + sortChange + '&nbsp; </button>';
 
   } else  if (sortChange === 'Alphabetic'){
     sortChange = 'Numeric';
 
     document.getElementById('sortChange').innerHTML
 
-    =  '<button type="button" class="btn btn-outline-info order-btn-fix">  &nbsp &nbsp' + sortChange + '&nbsp &nbsp </button>';
+    =  '<button onclick="sortChangeFunction()" type="button" class="btn btn-outline-info order-btn-fix">  &nbsp; &nbsp;' + sortChange + '&nbsp; &nbsp; </button>';
   };
 
   sortBy();
 
-});
+};
 
 // selectingBirds();

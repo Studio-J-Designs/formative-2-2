@@ -55,6 +55,9 @@
 #contentArea {
   margin-left: 15%; }
 
+.contentAreaFix {
+  margin-left: -15%; }
+
 /* The Overlay (background) */
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
@@ -160,5 +163,27 @@
   color: #000;
   text-decoration: none;
   cursor: pointer; }
+
+.column {
+  float: left;
+  width: 50%; }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.swiper-slide {
+  background-position: center;
+  background-size: 250px;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px; }
 
 /*# sourceMappingURL=master.css.map */
